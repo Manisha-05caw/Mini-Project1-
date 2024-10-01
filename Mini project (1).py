@@ -11,24 +11,29 @@ print("Anda teerdaftar sebagai member, selamat berbelanja")
 harga = float(input("Harga Produk: "))
 jumlah = int(input("Jumlah Produk: "))
 total = harga * jumlah
-print("Total harga:", total)
+print("Keseluruhan harga:", total)
 
 if  total > 250000:
     diskon = total * 0.25 
     total -= diskon 
-    print("Keseluruhan harga: ", total)
+    print("Harga setelah diskon: ", total)
 else: 
    print("Maaf, Anda tidak mendapat diskon")
 
 while True:
-  lanjut = input("Apakah ada lagi yang ingin dibeli lagi? (y/t): ")
+  kembali = input("Apakah ada lagi yang ingin dibeli lagi? (ya/tidak): ")
  
-  if lanjut == 'y':
+  if kembali == 'ya':
     harga = float(input("Harga Produk: "))
     jumlah = int(input("Jumlah Produk: "))
     total = harga * jumlah
+    print("Keseluruhan harga:", total)
+  if total > 250000:
+    diskon = total * 0.25 
+    total -= diskon 
+    print("Harga setelah diskon: ", total)
+  else: 
+   print("Maaf, Anda tidak mendapat diskon")
 
-  else:
-    print("Terima Kasih telah berbelanja di cawmarket, Ditunggu kedatangan anda berikutnya")
-
-    break
+else:
+  print("Terima Kasih telah berbelanja di cawmarket, Ditunggu kedatangan anda berikutnya")
